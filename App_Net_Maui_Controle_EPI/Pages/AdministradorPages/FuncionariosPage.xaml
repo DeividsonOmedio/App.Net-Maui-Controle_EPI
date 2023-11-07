@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App_Net_Maui_Controle_EPI.Pages.AdministradorPages.FuncionariosPage"
+             Title="FuncionariosPage">
+    <VerticalStackLayout>
+        <Button
+            IsVisible="True"
+            Text="Adicionar Funcionario"
+            HorizontalOptions="Center"
+            Margin="16"
+            x:Name="btnAddFunc"
+            Clicked="btnAddFunc_Clicked"/>
+
+        <VerticalStackLayout
+            IsVisible="False"
+            x:Name="tagAddFunc">
+        <Label 
+            Text="Adicionar Funcionario"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" 
+            Margin="16"/>
+
+        <Label 
+            Text="Matricula Funcionario"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+        <Entry
+            Placeholder="Digite a Matricula do Funcionário"
+            x:Name="txtMatriculaFuncionarioNovo"/>
+
+
+        <Label 
+            Text="Nome Funcionario"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+        <Entry
+            Placeholder="Digite o Nome do Funcionario"
+            x:Name="txtNomeFuncionarioNovo"/>
+
+
+        <Label 
+            Text="Funcao Funcionario"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+        <Entry
+            Placeholder="Digite a Função do Funcionario"
+            x:Name="txtFuncaoFuncionarioNovo"/>
+
+        <Button
+            Text="Registrar"
+            x:Name="btnRegistrarFuncionarioNovo"
+            Clicked="btnRegistrarFuncionarioNovo_Clicked"
+            Margin="16"/>
+        </VerticalStackLayout>
+
+        <Button
+         IsVisible="True"
+         Text="Listar Todos os Funcionarios"
+         HorizontalOptions="Center"
+         Margin="16"
+         x:Name="btnListarFunc"
+         Clicked="btnListar_Func_Clicked"/>
+
+        <VerticalStackLayout
+            IsVisible="True"
+            x:Name="tagListaDosFunc">
+            
+        </VerticalStackLayout>
+            
+
+    </VerticalStackLayout>
+</ContentPage>

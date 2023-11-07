@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App_Net_Maui_Controle_EPI.Pages.AdministradorPages.DashboardPage"
+             Title="DashboardPage">
+    <VerticalStackLayout>
+        <Label 
+            Text="EPI's Emprestados"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" 
+            Margin="16"/>
+
+        <Frame BorderColor="Gray"
+               CornerRadius="10">
+
+            <VerticalStackLayout>
+            <HorizontalStackLayout>
+                
+                <Label Text="Ferramenta"/>
+                <Label Text="Funcionario"/>
+                <Label Text="Data Emprestimo"/>
+                <Label Text="Data Prevista"/>
+                
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout>
+
+                <Label 
+                    Text="Ferramenta"
+                    x:Name="lblFerramenta"/>
+                <Label 
+                    Text="Funcionario"
+                     x:Name="lblFuncionario"/>
+                <Label 
+                    Text="Data Emprestimo"
+                     x:Name="lblDataEmprestimo"/>
+                <Label 
+                    Text="Data Prevista"
+                     x:Name="lblDataPrevista"/>
+
+            </HorizontalStackLayout>
+
+
+                <CollectionView
+                    x:Name="ListaEpisEmprestados" Grid.Row="4">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+
+                                <Label Text="{Binding Code}"/>
+                                <Label Text="{Binding Name}"/>
+                                <Label Text="{Binding DateEmp}"/>
+                                <Label Text="{Binding DateDev}"/>
+
+                            </Grid>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                    
+                </CollectionView>
+
+            </VerticalStackLayout>
+
+
+
+
+
+
+        </Frame>
+
+
+    </VerticalStackLayout>
+</ContentPage>
